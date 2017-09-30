@@ -1,0 +1,29 @@
+{
+    "name": "hubcamp-site",
+    "version": "0.0.1",
+    "description": "Hubcamp Site",
+    "main": "Gruntfile.js",
+    "keywords": [
+      "Hubcamp Refresh"
+    ],
+    "authors": [
+      "Enrique  <enrique.estrada@hubcamp.com>"
+    ],
+    "license": "ISC",
+    "moduleType": [],
+    "homepage": "site.hubcamp.com",
+    "dependencies": {
+      "angular": "~1.5.5",
+      "bootstrap": "~3.3.7",
+      "jquery": "~1.9.1"
+    },
+    "private": true,
+    "ignore": [
+      "**/.*",
+      "logs/*.log",
+      "node_modules",
+      "test",
+      "tests"
+    ]
+  }
+  

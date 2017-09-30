@@ -1,0 +1,2472 @@
+@charset "UTF-8";
+/* Vendor
+================================================== */
+/* Base UI
+================================================== */
+/* Variables
+================================================== */
+/* Helpers
+================================================== */
+/* line 4, ../../scss/bootstrapUI/base/_reset.scss */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../scss/bootstrapUI/base/_reset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 18, ../../scss/bootstrapUI/base/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 22, ../../scss/bootstrapUI/base/_reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 25, ../../scss/bootstrapUI/base/_reset.scss */
+html {
+  width: 100% !important;
+  min-height: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 32, ../../scss/bootstrapUI/base/_reset.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 39, ../../scss/bootstrapUI/base/_reset.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+/* line 48, ../../scss/bootstrapUI/base/_reset.scss */
+table {
+  margin: 0;
+  font-family: "Arial", "Helvetica", sans-serif;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 56, ../../scss/bootstrapUI/base/_reset.scss */
+table.table-striped tbody > tr:nth-of-type(even) {
+  background-color: #ffffff;
+}
+/* line 59, ../../scss/bootstrapUI/base/_reset.scss */
+table.table-striped tbody > tr:nth-of-type(odd) {
+  background-color: #f1f1f1;
+}
+/* line 64, ../../scss/bootstrapUI/base/_reset.scss */
+table tbody tr {
+  height: 40px;
+}
+
+/* line 72, ../../scss/bootstrapUI/base/_reset.scss */
+img {
+  max-width: 100%;
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/* line 77, ../../scss/bootstrapUI/base/_reset.scss */
+::-webkit-input-placeholder {
+  color: #878787;
+}
+
+/* Mixins
+================================================== */
+/* Fonts
+================================================== */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("../fonts/Lato/Lato-Regular.eot");
+  src: url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato/Lato-Regular.woff") format("woff"), url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoWebItalic';
+  src: url("../fonts/Lato/Lato-Italic.eot");
+  src: url("../fonts/Lato/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Italic.woff2") format("woff2"), url("../fonts/Lato/Lato-Italic.woff") format("woff"), url("../fonts/lato/Lato-Italic.ttf") format("truetype");
+  font-weight: italic;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoWebLight';
+  src: url("../fonts/Lato/Lato-Light.eot");
+  src: url("../fonts/Lato/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Light.woff2") format("woff2"), url("../fonts/Lato/Lato-Light.woff") format("woff"), url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoWebSemibold';
+  src: url("../fonts/Lato/Lato-Semibold.eot");
+  src: url("../fonts/Lato/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato/Lato-Semibold.woff") format("woff"), url("../fonts/Lato/Lato-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoWebBold';
+  src: url("../fonts/Lato/Lato-Bold.eot");
+  src: url("../fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato/Lato-Bold.woff") format("woff"), url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'cvwebfont';
+  src: url("../fonts/CV/cvwebfont.eot");
+  src: url("../fonts/CV/cvwebfont.eot?#iefix") format("embedded-opentype"), url("../fonts/CV/cvwebfont.woff") format("woff"), url("../fonts/CV/cvwebfont.ttf") format("truetype"), url("../fonts/CV/cvwebfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Global
+=================================================== */
+/* line 15, ../../scss/bootstrapUI.scss */
+.wrapper {
+  font-size: 1em;
+  line-height: 1.25;
+}
+
+/* line 19, ../../scss/bootstrapUI.scss */
+html, body {
+  height: 100%;
+  background: #f1f1f1;
+}
+
+/* line 23, ../../scss/bootstrapUI.scss */
+.fallback {
+  display: none !important;
+}
+
+/* line 26, ../../scss/bootstrapUI.scss */
+body {
+  font-family: "LatoWeb";
+  color: #5b5a5b;
+}
+
+/* UI General
+================================================== */
+/* Font Icons
+================================================== */
+/* line 5, ../../scss/bootstrapUI/components/_font-icons.scss */
+[data-icon]:before {
+  font-family: "cvwebfont" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 17, ../../scss/bootstrapUI/components/_font-icons.scss */
+[class^="cvif-"]:before,
+[class*=" cvif-"]:before {
+  font-family: "cvwebfont" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 32, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-kogni:before {
+  content: "\e000";
+}
+
+/* line 35, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-managed-services:before {
+  content: "\e001";
+}
+
+/* line 38, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-prism:before {
+  content: "\e002";
+}
+
+/* line 41, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-google-plus:before {
+  content: "\e003";
+}
+
+/* line 44, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-facebook:before {
+  content: "\e004";
+}
+
+/* line 47, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-github:before {
+  content: "\e005";
+}
+
+/* line 50, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-linkedin:before {
+  content: "\e006";
+}
+
+/* line 53, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-twitter:before {
+  content: "\e007";
+}
+
+/* line 56, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-minus-empty:before {
+  content: "\e008";
+}
+
+/* line 59, ../../scss/bootstrapUI/components/_font-icons.scss */
+.cvif-icon-plus-empty:before {
+  content: "\e009";
+}
+
+/* Button
+================================================== */
+/* line 65, ../../scss/bootstrapUI/components/_buttons.scss */
+input[type="submit"] {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #fd5c22;
+  border: solid 1px #fb4402;
+  color: #ffffff;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+/* line 34, ../../scss/bootstrapUI/components/_buttons.scss */
+input[type="submit"]:active, input[type="submit"]:focus, input[type="submit"]:hover {
+  background-color: #fe895f;
+  border-color: #fb4402;
+  color: #ffffff;
+}
+/* line 40, ../../scss/bootstrapUI/components/_buttons.scss */
+input[type="submit"]:active:hover {
+  background-color: #e03d02;
+  border-color: #fe9d79;
+}
+
+/* line 66, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn, button, input[type="button"], input[type="reset"] {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  transition: color .25s linear, background-color .5s ease-in-out, border-color .25s ease-in;
+}
+
+/* line 70, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-default {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #ffffff;
+  border: solid 1px #fd5c22;
+  color: #fd5c22;
+  padding-left: 48px;
+  padding-right: 48px;
+  border-width: 2px;
+}
+/* line 52, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-default:active, .btn-default:focus, .btn-default:hover {
+  background-color: #ffffff;
+  border-color: #fb4402;
+  color: #191919;
+}
+/* line 58, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-default:active:hover {
+  background-color: #f1f1f1;
+  border-color: #fe9d79;
+}
+/* line 72, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-default.disabled, .btn-default[disabled] {
+  border: none;
+  cursor: default;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.33;
+}
+
+/* line 77, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-primary {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #fd5c22;
+  border: solid 1px #fb4402;
+  color: #ffffff;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+/* line 34, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #fe895f;
+  border-color: #fb4402;
+  color: #ffffff;
+}
+/* line 40, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-primary:active:hover {
+  background-color: #e03d02;
+  border-color: #fe9d79;
+}
+/* line 79, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-primary.disabled, .btn-primary[disabled] {
+  border: none;
+  cursor: default;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.33;
+}
+
+/* line 84, ../../scss/bootstrapUI/components/_buttons.scss */
+.btn-rounded {
+  border-radius: 24px;
+}
+
+/* Forms
+================================================== */
+/* line 4, ../../scss/bootstrapUI/components/_forms.scss */
+label {
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333;
+}
+
+/* line 9, ../../scss/bootstrapUI/components/_forms.scss */
+input.form-control {
+  border: 1px solid #c6c6c6;
+  border-radius: 2px;
+}
+
+/* Typography
+================================================== */
+/* line 5, ../../scss/bootstrapUI/components/_typography.scss */
+h1, h2, h3, h4, h5 {
+  font-size-adjust: 0.5;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  font-family: "LatoWebBold";
+}
+
+/* line 12, ../../scss/bootstrapUI/components/_typography.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+@media (min-width: 768px) {
+  /* line 12, ../../scss/bootstrapUI/components/_typography.scss */
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+}
+
+/* line 20, ../../scss/bootstrapUI/components/_typography.scss */
+h2 {
+  font-size: 1.625em;
+  line-height: 1.153em;
+}
+@media (min-width: 768px) {
+  /* line 20, ../../scss/bootstrapUI/components/_typography.scss */
+  h2 {
+    font-size: 2em;
+    font-size: 1.25em;
+  }
+}
+
+/* line 28, ../../scss/bootstrapUI/components/_typography.scss */
+h3 {
+  font-size: 1.375em;
+  line-height: 1.36em;
+}
+@media (min-width: 768px) {
+  /* line 28, ../../scss/bootstrapUI/components/_typography.scss */
+  h3 {
+    font-size: 1.5em;
+    font-size: 1.25em;
+  }
+}
+
+/* line 36, ../../scss/bootstrapUI/components/_typography.scss */
+h4 {
+  font-size: 1.625em;
+  line-height: 1.15em;
+}
+@media (min-width: 768px) {
+  /* line 36, ../../scss/bootstrapUI/components/_typography.scss */
+  h4 {
+    font-size: 1.125em;
+    font-size: 1.25em;
+  }
+}
+
+/* line 46, ../../scss/bootstrapUI/components/_typography.scss */
+h1 a, h2 a, h3 a, h4 a {
+  font-weight: inherit;
+}
+
+/* line 51, ../../scss/bootstrapUI/components/_typography.scss */
+h5 {
+  font-family: "LatoWeb";
+}
+
+/* line 55, ../../scss/bootstrapUI/components/_typography.scss */
+blockquote {
+  font-size: 1.5em;
+  line-height: 1.458em;
+}
+@media (min-width: 768px) {
+  /* line 55, ../../scss/bootstrapUI/components/_typography.scss */
+  blockquote {
+    font-size: 1.125em;
+    font-size: 1.25em;
+  }
+}
+
+/* Base
+================================================== */
+/* line 5, ../../scss/bootstrapUI/components/_general.scss */
+a {
+  color: inherit;
+}
+/* line 7, ../../scss/bootstrapUI/components/_general.scss */
+a:active, a:focus, a:hover {
+  color: #fd5c22;
+}
+
+/* line 11, ../../scss/bootstrapUI/components/_general.scss */
+.no-padding {
+  padding: 0;
+}
+
+/* line 14, ../../scss/bootstrapUI/components/_general.scss */
+.minimal-padding {
+  padding: 0 8px;
+}
+
+/* line 17, ../../scss/bootstrapUI/components/_general.scss */
+.row-no-bounding {
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../../scss/bootstrapUI/components/_general.scss */
+.row-no-bounding [class*="col-"], .row-no-bounding .row {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 25, ../../scss/bootstrapUI/components/_general.scss */
+.img-fit {
+  width: auto !important;
+  max-width: initial !important;
+}
+
+/* line 29, ../../scss/bootstrapUI/components/_general.scss */
+.white-color {
+  color: #ffffff;
+}
+
+/* line 32, ../../scss/bootstrapUI/components/_general.scss */
+.white-bg {
+  background-color: #ffffff;
+}
+
+/* line 35, ../../scss/bootstrapUI/components/_general.scss */
+.off-white-bg {
+  background-color: #f1f1f1;
+}
+
+/* line 38, ../../scss/bootstrapUI/components/_general.scss */
+.light-grey-bg {
+  background-color: #e5e5e5;
+}
+
+/* line 41, ../../scss/bootstrapUI/components/_general.scss */
+.charcoal-grey-bg {
+  background-color: #5b5a5b;
+}
+
+/* line 44, ../../scss/bootstrapUI/components/_general.scss */
+.container {
+  border: dotted 1px red;
+}
+
+/* line 47, ../../scss/bootstrapUI/components/_general.scss */
+.container-fluid {
+  border: dotted 1px green;
+}
+
+/* line 55, ../../scss/bootstrapUI/components/_general.scss */
+.services-icon {
+  display: inline-block;
+  margin: 24px auto;
+  text-align: center;
+  position: relative;
+}
+/* line 61, ../../scss/bootstrapUI/components/_general.scss */
+.services-icon i[class^="cvif-"]:before {
+  font-size: 24px;
+  color: #fd5c22;
+}
+/* line 65, ../../scss/bootstrapUI/components/_general.scss */
+.services-icon i.square, .services-icon i.circle {
+  display: block;
+  border: solid 1px #fd5c22;
+  height: 112px;
+  width: 112px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+/* line 75, ../../scss/bootstrapUI/components/_general.scss */
+.services-icon i.square + i,
+.services-icon i.square + img, .services-icon i.circle + i,
+.services-icon i.circle + img {
+  height: 88px;
+  width: 88px;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+/* line 82, ../../scss/bootstrapUI/components/_general.scss */
+.services-icon i.square + i:before,
+.services-icon i.square + img:before, .services-icon i.circle + i:before,
+.services-icon i.circle + img:before {
+  font-size: 64px;
+  line-height: 1.4;
+}
+/* line 88, ../../scss/bootstrapUI/components/_general.scss */
+.services-icon i.circle {
+  border-radius: 100%;
+}
+
+/* line 95, ../../scss/bootstrapUI/components/_general.scss */
+.services-overview a.btn {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  /* line 99, ../../scss/bootstrapUI/components/_general.scss */
+  .services-overview a.btn {
+    margin-top: 40px;
+  }
+}
+
+/* line 106, ../../scss/bootstrapUI/components/_general.scss */
+.list .title {
+  font-family: "LatoWebSemibold";
+  font-size: 20px;
+  color: #333333;
+}
+/* line 111, ../../scss/bootstrapUI/components/_general.scss */
+.list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 115, ../../scss/bootstrapUI/components/_general.scss */
+.list ul li {
+  margin-bottom: 24px;
+  color: #6d6d6d;
+  padding-left: 18px;
+  text-indent: -18px;
+}
+/* line 120, ../../scss/bootstrapUI/components/_general.scss */
+.list ul li:before {
+  content: "• ";
+  color: #fd5c22;
+  margin-right: 6px;
+}
+@media (min-width: 768px) {
+  /* line 129, ../../scss/bootstrapUI/components/_general.scss */
+  .list .list .title {
+    font-size: 24px;
+  }
+  /* line 132, ../../scss/bootstrapUI/components/_general.scss */
+  .list .list ul {
+    padding: 1em;
+  }
+  /* line 134, ../../scss/bootstrapUI/components/_general.scss */
+  .list .list ul li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* line 144, ../../scss/bootstrapUI/components/_general.scss */
+.stack-list .subheading {
+  color: #333333;
+  margin-bottom: 16px;
+}
+/* line 148, ../../scss/bootstrapUI/components/_general.scss */
+.stack-list p {
+  font-size: 16px;
+  color: #6d6d6d;
+  letter-spacing: -0.04px;
+  line-height: 25px;
+}
+
+/* line 157, ../../scss/bootstrapUI/components/_general.scss */
+.stack-block article {
+  padding: 24px;
+  min-height: 90px;
+}
+/* line 163, ../../scss/bootstrapUI/components/_general.scss */
+.stack-block .info header .title {
+  font-size: 28px;
+}
+/* line 167, ../../scss/bootstrapUI/components/_general.scss */
+.stack-block .info .content {
+  line-height: 140%;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  /* line 173, ../../scss/bootstrapUI/components/_general.scss */
+  .stack-block .info .content {
+    line-height: 180%;
+    font-size: 16px;
+  }
+}
+
+/* line 182, ../../scss/bootstrapUI/components/_general.scss */
+.csstable-container .csstable-col:before {
+  content: '';
+  display: block;
+  background: #ffffff;
+  border: solid 1px #e5e5e5;
+  height: 100%;
+  z-index: 1;
+  width: calc(100% - 16px);
+  position: absolute;
+}
+@media (min-width: 768px) {
+  /* line 180, ../../scss/bootstrapUI/components/_general.scss */
+  .csstable-container {
+    margin: 20px 0 40px;
+    display: table;
+  }
+  /* line 197, ../../scss/bootstrapUI/components/_general.scss */
+  .csstable-container .csstable-col {
+    display: table-cell;
+    float: none;
+  }
+}
+
+/* line 206, ../../scss/bootstrapUI/components/_general.scss */
+.header .intro-text {
+  padding: 40px 8px 0 8px;
+}
+/* line 208, ../../scss/bootstrapUI/components/_general.scss */
+.header .intro-text h1, .header .intro-text h2 {
+  letter-spacing: -0.03em;
+}
+/* line 211, ../../scss/bootstrapUI/components/_general.scss */
+.header .intro-text .lead-in {
+  font-family: "LatoWebSemibold";
+  color: #191919;
+}
+/* line 215, ../../scss/bootstrapUI/components/_general.scss */
+.header .intro-text .heading {
+  font-family: "LatoWebLight";
+  color: #333333;
+  line-height: 140%;
+}
+/* line 222, ../../scss/bootstrapUI/components/_general.scss */
+.header .box-container svg.article {
+  display: block;
+  height: 300px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 230, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text {
+    padding-top: 80px;
+  }
+  /* line 233, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text .lead-in {
+    font-size: 36px;
+  }
+  /* line 237, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text span:before {
+    content: "\A";
+    white-space: pre;
+  }
+  /* line 242, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text .heading {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 248, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text {
+    padding-top: 120px;
+  }
+  /* line 250, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text .lead-in {
+    font-size: 40px;
+  }
+  /* line 253, ../../scss/bootstrapUI/components/_general.scss */
+  .header .intro-text .heading {
+    font-size: 24px;
+  }
+}
+
+/* line 260, ../../scss/bootstrapUI/components/_general.scss */
+section {
+  padding: 16px 0 48px;
+}
+/* line 263, ../../scss/bootstrapUI/components/_general.scss */
+section .heading {
+  color: #333333;
+  margin: 10px 0 20px;
+  letter-spacing: 0.08em;
+}
+/* line 268, ../../scss/bootstrapUI/components/_general.scss */
+section .subheading {
+  margin: 12px 0 24px;
+  color: #6d6d6d;
+  letter-spacing: -0.03em;
+  line-height: 150%;
+}
+/* line 273, ../../scss/bootstrapUI/components/_general.scss */
+section .subheading strong {
+  font-weight: 400;
+  color: #fd5c22;
+}
+/* line 278, ../../scss/bootstrapUI/components/_general.scss */
+section .service-heading {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  font-family: "LatoWebSemibold";
+}
+/* line 284, ../../scss/bootstrapUI/components/_general.scss */
+section .big-heading {
+  font-family: "LatoWebLight";
+  font-size: 28px;
+  color: #fd5c22;
+  margin-bottom: 24px;
+}
+/* line 290, ../../scss/bootstrapUI/components/_general.scss */
+section .small-heading {
+  border-left: solid 1px #999999;
+  padding: 8px 0 8px 24px;
+}
+/* line 294, ../../scss/bootstrapUI/components/_general.scss */
+section .subheading-light {
+  color: #999999;
+}
+@media (min-width: 768px) {
+  /* line 260, ../../scss/bootstrapUI/components/_general.scss */
+  section {
+    padding: 64px 0;
+  }
+  /* line 300, ../../scss/bootstrapUI/components/_general.scss */
+  section .heading {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+  /* line 305, ../../scss/bootstrapUI/components/_general.scss */
+  section .subheading {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  /* line 309, ../../scss/bootstrapUI/components/_general.scss */
+  section .service-heading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* line 313, ../../scss/bootstrapUI/components/_general.scss */
+  section .big-heading {
+    font-size: 40px;
+  }
+  /* line 316, ../../scss/bootstrapUI/components/_general.scss */
+  section .small-heading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 260, ../../scss/bootstrapUI/components/_general.scss */
+  section {
+    padding: 80px 0;
+  }
+  /* line 325, ../../scss/bootstrapUI/components/_general.scss */
+  section .service-heading span:before {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+/* line 335, ../../scss/bootstrapUI/components/_general.scss */
+.gallery .news-link {
+  position: relative;
+  color: inherit;
+  display: block;
+  margin-bottom: 8px;
+  bottom: 0;
+}
+/* line 341, ../../scss/bootstrapUI/components/_general.scss */
+.gallery .news-link header {
+  position: relative;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 10;
+}
+/* line 347, ../../scss/bootstrapUI/components/_general.scss */
+.gallery .news-link header .title {
+  font-family: "LatoWebBold";
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  margin: 0;
+  padding: 4px;
+  background-color: rgba(25, 25, 25, 0.9);
+}
+/* line 358, ../../scss/bootstrapUI/components/_general.scss */
+.gallery img {
+  min-width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 364, ../../scss/bootstrapUI/components/_general.scss */
+  .gallery .news-link {
+    margin-bottom: 0;
+  }
+  /* line 366, ../../scss/bootstrapUI/components/_general.scss */
+  .gallery .news-link header .title {
+    font-size: 16px;
+    line-height: 20px;
+    background-color: transparent;
+  }
+}
+@media (min-width: 992px) {
+  /* line 334, ../../scss/bootstrapUI/components/_general.scss */
+  .gallery {
+    padding: 0 12px;
+  }
+}
+
+/* line 378, ../../scss/bootstrapUI/components/_general.scss */
+.timeline {
+  list-style: none;
+}
+/* line 380, ../../scss/bootstrapUI/components/_general.scss */
+.timeline .timeline-panel {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+/* line 384, ../../scss/bootstrapUI/components/_general.scss */
+.timeline .timeline-panel .title {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 4px;
+  position: relative;
+  font-family: "LatoWebBold";
+  color: #333333;
+  font-size: 14px;
+  margin: 0;
+}
+/* line 394, ../../scss/bootstrapUI/components/_general.scss */
+.timeline .timeline-panel .content {
+  border: solid 1px #c6c6c6;
+  border-radius: 4px;
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 140%;
+}
+@media (min-width: 768px) {
+  /* line 405, ../../scss/bootstrapUI/components/_general.scss */
+  .timeline .timeline-panel .title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 411, ../../scss/bootstrapUI/components/_general.scss */
+  .timeline .timeline-panel {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* UI Modules
+================================================== */
+/* Header
+================================================== */
+/* line 4, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom {
+  background-color: #ffffff;
+  padding: 16px 0;
+  position: relative;
+  z-index: 100;
+}
+/* line 11, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-header .navbar-brand {
+  padding: 8px 4px;
+  height: auto;
+}
+/* line 14, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-header .navbar-brand > img {
+  max-width: 216px;
+  width: 100%;
+  padding: 8px 0 0 0;
+}
+/* line 20, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-header .navbar-toggle {
+  background-color: #f1f1f1;
+  color: #444444;
+  margin: 0;
+  height: auto;
+  padding: 16px 10px;
+}
+/* line 26, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-header .navbar-toggle .icon-bar {
+  background-color: #444444;
+}
+/* line 31, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav {
+  background-color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 36, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav li a {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #333333;
+  font-family: "LatoWebSemibold";
+}
+/* line 41, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav li a .caret {
+  margin-top: -2px;
+}
+/* line 47, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav > li a {
+  padding-top: 16px;
+  border-bottom: solid 1px transparent;
+}
+/* line 50, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav > li a:hover, .nav-custom .navbar-nav > li a:active {
+  background-color: #f1f1f1;
+  color: #fd5c22;
+}
+/* line 56, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav > li .dropdown-menu {
+  padding: 0;
+}
+/* line 58, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .navbar-nav > li .dropdown-menu > li a {
+  padding: 16px 12px 12px 24px;
+}
+/* line 65, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom .nav .open > a:hover, .nav-custom .nav .open > a:active, .nav-custom .nav .open > a:focus {
+  border-color: #fd5c22;
+}
+/* line 75, ../../scss/bootstrapUI/components/_header.scss */
+.nav-custom.fixed-header {
+  background: #ffffff;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  transition: position .85s ease-in, background .75s ease-in-out, padding 1.15s linear;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  padding: 8px 0 12px;
+}
+@media (min-width: 768px) {
+  /* line 4, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom {
+    background-color: transparent;
+  }
+  /* line 87, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-header {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  /* line 91, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-header .navbar-brand {
+    display: inline-block;
+    float: none;
+  }
+  /* line 97, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .nav .open > a:focus, .nav-custom .nav .open > a:hover, .nav-custom .nav .open > a:active {
+    background-color: transparent;
+    color: #fd5c22;
+  }
+  /* line 104, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-nav {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    float: right;
+  }
+  /* line 110, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-nav > li {
+    display: inline-block;
+    float: none;
+    margin: 8px 8px 0 8px;
+  }
+  /* line 114, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-nav > li a {
+    border-bottom: 3px solid transparent;
+    padding: 12px 10px;
+  }
+  /* line 117, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-nav > li a:hover, .nav-custom .navbar-nav > li a:active {
+    background-color: transparent;
+    border-color: #fd5c22;
+    cursor: pointer;
+  }
+  /* line 131, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom.fixed-header .navbar-brand {
+    padding: 0 4px;
+  }
+  /* line 133, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom.fixed-header .navbar-brand > img {
+    max-width: 180px;
+  }
+  /* line 138, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom.fixed-header .navbar-nav > li {
+    margin-top: 0;
+  }
+  /* line 140, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom.fixed-header .navbar-nav > li a {
+    padding: 8px 10px 4px 10px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 4, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom {
+    padding: 28px 0 20px;
+  }
+  /* line 149, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-header {
+    width: auto;
+  }
+  /* line 152, ../../scss/bootstrapUI/components/_header.scss */
+  .nav-custom .navbar-nav {
+    width: auto;
+  }
+}
+
+/* Footer
+================================================== */
+/* line 3, ../../scss/bootstrapUI/components/_footer.scss */
+.footer {
+  padding: 32px 0 16px;
+  background-color: #ffffff;
+}
+/* line 7, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div a {
+  display: block;
+  color: inherit;
+}
+/* line 11, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div.social {
+  border-bottom: solid 1px #999999;
+  padding-bottom: 20px;
+  margin-bottom: 48px;
+}
+/* line 15, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div.social a {
+  height: 24px;
+  color: #c6c6c6;
+  text-align: center;
+  background-color: #ffffff;
+}
+/* line 20, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div.social a:active, .footer div.social a:focus, .footer div.social a:hover {
+  text-decoration: none;
+  color: #6d6d6d;
+}
+/* line 24, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div.social a i:before {
+  font-size: 24px;
+}
+/* line 29, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div.logo {
+  max-width: 200px;
+  margin-bottom: 40px;
+}
+/* line 32, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div.logo p {
+  font-family: "LatoWebLight";
+  font-size: 20px;
+  letter-spacing: 0.08px;
+  margin-top: 20px;
+}
+/* line 39, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div ul {
+  list-style: none;
+  margin-bottom: 32px;
+}
+/* line 42, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div ul li {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+/* line 45, ../../scss/bootstrapUI/components/_footer.scss */
+.footer div ul li a {
+  color: #333333;
+  font-family: "LatoWebLight";
+}
+/* line 52, ../../scss/bootstrapUI/components/_footer.scss */
+.footer h3 {
+  font-family: "LatoWebBold";
+  color: #191919;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.015em;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+/* line 61, ../../scss/bootstrapUI/components/_footer.scss */
+.footer .copyright {
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  /* line 3, ../../scss/bootstrapUI/components/_footer.scss */
+  .footer {
+    padding: 48px 0 24px;
+  }
+}
+
+/* Header
+================================================== */
+/* line 6, ../../scss/bootstrapUI/components/_home.scss */
+.hero-image .shapes {
+  display: block;
+  min-height: 400px;
+  background: url(../img//hero-image/hero-image-01-min.jpg) no-repeat center top;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.img/hero-image/hero-image-01-min.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/hero-image/hero-image-01-min.jpg', sizingMethod='scale')";
+}
+/* line 17, ../../scss/bootstrapUI/components/_home.scss */
+.hero-image .box1 {
+  width: 100%;
+  height: 300px;
+  border: solid 1px #999999;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+/* line 25, ../../scss/bootstrapUI/components/_home.scss */
+.hero-image .box1 .wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: linear-gradient(60.81deg, #27D2EA 0%, #0CDAF8 100%);
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+/* line 46, ../../scss/bootstrapUI/components/_home.scss */
+.news {
+  background-color: #ffffff;
+}
+/* line 50, ../../scss/bootstrapUI/components/_home.scss */
+.news .gallery .row.row-no-bounding {
+  margin-bottom: 6px;
+}
+@media (min-width: 768px) {
+  /* line 55, ../../scss/bootstrapUI/components/_home.scss */
+  .news .gallery .row.row-no-bounding:nth-of-type(odd):first-child .col-sm-8 {
+    padding: 3px;
+  }
+  /* line 58, ../../scss/bootstrapUI/components/_home.scss */
+  .news .gallery .row.row-no-bounding:nth-of-type(odd):first-child .col-sm-4 {
+    padding-left: 1px;
+  }
+  /* line 60, ../../scss/bootstrapUI/components/_home.scss */
+  .news .gallery .row.row-no-bounding:nth-of-type(odd):first-child .col-sm-4 [class*="col-"] {
+    padding: 3px;
+  }
+  /* line 67, ../../scss/bootstrapUI/components/_home.scss */
+  .news .gallery .row.row-no-bounding:nth-of-type(even) [class*="col-"] {
+    padding: 0 3px;
+  }
+}
+/* line 73, ../../scss/bootstrapUI/components/_home.scss */
+.news .gallery .news-link header {
+  position: absolute;
+}
+/* line 75, ../../scss/bootstrapUI/components/_home.scss */
+.news .gallery .news-link header .title {
+  padding-left: 8px;
+  color: #f1f1f1;
+}
+
+/* line 85, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .news .gallery .row-no-bounding.first-child .col-sm-8 {
+  padding: 3px;
+}
+/* line 87, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .news .gallery .row-no-bounding.first-child .col-sm-8 p {
+  bottom: 36px;
+}
+/* line 91, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .news .gallery .row-no-bounding.first-child .col-sm-4 {
+  padding-left: 1px;
+}
+/* line 93, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .news .gallery .row-no-bounding.first-child .col-sm-4 .col-sm-12 {
+  padding: 3px;
+}
+/* line 99, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .news .gallery .row-no-bounding.second-child .col-sm-4 {
+  padding: 0 3px;
+}
+
+/* line 109, ../../scss/bootstrapUI/components/_home.scss */
+.services .bars {
+  display: block;
+  background: url(../img//home/services-big-data-min1.jpg) no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 116, ../../scss/bootstrapUI/components/_home.scss */
+.services .bars svg {
+  width: 100%;
+  transform: scale(1.5, 1.5);
+}
+/* line 120, ../../scss/bootstrapUI/components/_home.scss */
+.services .bars .main-orange {
+  fill: #fd5c22;
+}
+/* line 123, ../../scss/bootstrapUI/components/_home.scss */
+.services .bars .leftGreyBars {
+  position: relative;
+  opacity: 0.1;
+}
+/* line 128, ../../scss/bootstrapUI/components/_home.scss */
+.services .bars .rightGreyBars {
+  opacity: 0.1;
+  position: relative;
+}
+/* line 135, ../../scss/bootstrapUI/components/_home.scss */
+.services.parallax .bars {
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  /* line 140, ../../scss/bootstrapUI/components/_home.scss */
+  .services .bars {
+    margin-top: 40px;
+  }
+  /* line 143, ../../scss/bootstrapUI/components/_home.scss */
+  .services .bars svg {
+    transform: scale(1, 1);
+  }
+}
+
+/* line 152, ../../scss/bootstrapUI/components/_home.scss */
+.customers {
+  background-color: #ffffff;
+}
+/* line 154, ../../scss/bootstrapUI/components/_home.scss */
+.customers .subheading {
+  color: #999999;
+}
+/* line 157, ../../scss/bootstrapUI/components/_home.scss */
+.customers .gallery {
+  padding: 8px 0;
+}
+/* line 159, ../../scss/bootstrapUI/components/_home.scss */
+.customers .gallery .row {
+  margin-bottom: 20px;
+}
+/* line 161, ../../scss/bootstrapUI/components/_home.scss */
+.customers .gallery .row > div {
+  margin-bottom: 12px;
+}
+/* line 164, ../../scss/bootstrapUI/components/_home.scss */
+.customers .gallery .row img {
+  margin: 0 auto;
+}
+/* line 168, ../../scss/bootstrapUI/components/_home.scss */
+.customers .gallery + div {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  /* line 173, ../../scss/bootstrapUI/components/_home.scss */
+  .customers .gallery {
+    padding: 16px 64px;
+  }
+  /* line 176, ../../scss/bootstrapUI/components/_home.scss */
+  .customers .gallery .row > div {
+    margin-bottom: 24px;
+  }
+}
+
+/* line 186, ../../scss/bootstrapUI/components/_home.scss */
+.articles {
+  padding-bottom: 40px;
+}
+/* line 190, ../../scss/bootstrapUI/components/_home.scss */
+.articles .gallery .row [class*="col-"] {
+  margin-bottom: 8px;
+}
+/* line 194, ../../scss/bootstrapUI/components/_home.scss */
+.articles .gallery .news-link header {
+  position: absolute;
+}
+/* line 196, ../../scss/bootstrapUI/components/_home.scss */
+.articles .gallery .news-link header .title {
+  padding-left: 8px;
+  color: #f1f1f1;
+}
+@media (min-width: 768px) {
+  /* line 186, ../../scss/bootstrapUI/components/_home.scss */
+  .articles {
+    padding-bottom: 80px;
+  }
+  /* line 206, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row [class*="col-"] {
+    margin: 0;
+  }
+  /* line 211, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row-no-bounding > [class*="col-"]:first-child {
+    padding-left: 3px;
+  }
+  /* line 214, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row-no-bounding > [class*="col-"]:last-child {
+    padding-left: 6px;
+  }
+  /* line 216, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row-no-bounding > [class*="col-"]:last-child .row:first-child [class*="col-"] {
+    padding-bottom: 3px;
+  }
+  /* line 219, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row-no-bounding > [class*="col-"]:last-child .row:last-child [class*="col-"] {
+    padding-top: 3px;
+  }
+  /* line 221, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row-no-bounding > [class*="col-"]:last-child .row:last-child [class*="col-"]:first-child {
+    padding-right: 3px;
+  }
+  /* line 224, ../../scss/bootstrapUI/components/_home.scss */
+  .articles .gallery .row-no-bounding > [class*="col-"]:last-child .row:last-child [class*="col-"]:last-child {
+    padding-left: 3px;
+  }
+}
+
+/* line 234, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .articles .gallery .row-no-bounding .second-child {
+  padding-left: 6px;
+}
+/* line 236, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .articles .gallery .row-no-bounding .second-child .col-sm-12 {
+  padding-bottom: 3px;
+}
+/* line 239, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .articles .gallery .row-no-bounding .second-child .col-sm-6 {
+  padding-top: 3px;
+  padding-left: 3px;
+}
+/* line 242, ../../scss/bootstrapUI/components/_home.scss */
+.ie8 .articles .gallery .row-no-bounding .second-child .col-sm-6:first-child {
+  padding-left: 0;
+  padding-right: 3px;
+}
+
+/* line 252, ../../scss/bootstrapUI/components/_home.scss */
+.contact {
+  background-color: #ffffff;
+}
+/* line 255, ../../scss/bootstrapUI/components/_home.scss */
+.contact form .row {
+  margin-bottom: 20px;
+}
+/* line 258, ../../scss/bootstrapUI/components/_home.scss */
+.contact form label {
+  font-family: "LatoWebLight";
+}
+/* line 261, ../../scss/bootstrapUI/components/_home.scss */
+.contact form input.form-control {
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+  height: 45px;
+}
+@media (min-width: 992px) {
+  /* line 268, ../../scss/bootstrapUI/components/_home.scss */
+  .contact .subheading {
+    margin-bottom: 48px;
+  }
+  /* line 271, ../../scss/bootstrapUI/components/_home.scss */
+  .contact form {
+    padding: 0 36px;
+  }
+  /* line 274, ../../scss/bootstrapUI/components/_home.scss */
+  .contact form .row:first-child {
+    margin-bottom: 48px;
+  }
+  /* line 277, ../../scss/bootstrapUI/components/_home.scss */
+  .contact form .row:first-child .col-md-6:first-child {
+    padding-right: 32px;
+  }
+  /* line 280, ../../scss/bootstrapUI/components/_home.scss */
+  .contact form .row:first-child .col-md-6:last-child {
+    padding-left: 32px;
+  }
+}
+
+/* Pages
+================================================== */
+/* line 5, ../../scss/bootstrapUI/components/_pages.scss */
+.header.top-header {
+  padding: 0;
+}
+/* line 7, ../../scss/bootstrapUI/components/_pages.scss */
+.header.top-header .bg {
+  min-height: 240px;
+}
+/* line 11, ../../scss/bootstrapUI/components/_pages.scss */
+.header.top-header .intro-text {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+}
+/* line 16, ../../scss/bootstrapUI/components/_pages.scss */
+.header.top-header .header-padding {
+  background-color: #ffffff;
+  margin-top: 0;
+}
+/* line 22, ../../scss/bootstrapUI/components/_pages.scss */
+.header.services-header .bg {
+  background: url(../img//hero-image/services-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 28, ../../scss/bootstrapUI/components/_pages.scss */
+.header.bigdata-header .bg {
+  background: url(../img//hero-image/bigdata-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 34, ../../scss/bootstrapUI/components/_pages.scss */
+.header.enterprise-header .bg {
+  background: url(../img//hero-image/enterprise-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 40, ../../scss/bootstrapUI/components/_pages.scss */
+.header.design-header .bg {
+  background: url(../img//hero-image/design-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 46, ../../scss/bootstrapUI/components/_pages.scss */
+.header.managed-header .bg {
+  background: url(../img//hero-image/managed-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 52, ../../scss/bootstrapUI/components/_pages.scss */
+.header.about-header .bg {
+  background: url(../img//hero-image/about-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 58, ../../scss/bootstrapUI/components/_pages.scss */
+.header.careers-header .bg {
+  background: url(../img//hero-image/careers-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 64, ../../scss/bootstrapUI/components/_pages.scss */
+.header.clients-header .bg {
+  background: url(../img//hero-image/clients-header-min.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 70, ../../scss/bootstrapUI/components/_pages.scss */
+.header.blog-header .bg {
+  background: url(../img//services/services-header-min.png) no-repeat center top;
+  background-size: cover;
+}
+/* line 75, ../../scss/bootstrapUI/components/_pages.scss */
+.header.blog-detail-header {
+  background-color: #ffffff;
+  border-bottom: solid 8px #c6c6c6;
+}
+/* line 79, ../../scss/bootstrapUI/components/_pages.scss */
+.header.blog-detail-header .intro-text h1, .header.blog-detail-header .intro-text h2 {
+  color: #191919;
+}
+/* line 85, ../../scss/bootstrapUI/components/_pages.scss */
+.header.altisource-header .bg {
+  background-size: cover;
+}
+/* line 90, ../../scss/bootstrapUI/components/_pages.scss */
+.header.altisource-header .intro-text1 h1, .header.altisource-header .intro-text1 h2 {
+  color: #ffffff;
+  font-family: "LatoWebSemibold";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 768px) {
+  /* line 99, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .image, .header.top-header .intro-text {
+    width: 100%;
+    overflow: hidden;
+  }
+  /* line 103, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .image {
+    position: absolute;
+    top: 0;
+  }
+  /* line 107, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .bg {
+    min-height: 420px;
+  }
+  /* line 110, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .intro-text {
+    top: 104px;
+  }
+  /* line 113, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .header-padding {
+    margin-top: 280px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 120, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .intro-text {
+    top: 40px;
+  }
+  /* line 123, ../../scss/bootstrapUI/components/_pages.scss */
+  .header.top-header .header-padding {
+    margin-top: 315px;
+  }
+}
+
+/* line 133, ../../scss/bootstrapUI/components/_pages.scss */
+.family-values .bg {
+  margin-bottom: 12px;
+}
+/* line 136, ../../scss/bootstrapUI/components/_pages.scss */
+.family-values article {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 32px;
+}
+/* line 140, ../../scss/bootstrapUI/components/_pages.scss */
+.family-values article strong {
+  text-transform: lowercase;
+  font-family: "LatoWebSemibold";
+  color: #191919;
+  font-size: 20px;
+  font-variant: small-caps;
+}
+@media (min-width: 992px) {
+  /* line 132, ../../scss/bootstrapUI/components/_pages.scss */
+  .family-values {
+    padding-bottom: 24px;
+  }
+  /* line 150, ../../scss/bootstrapUI/components/_pages.scss */
+  .family-values .bg {
+    display: table-cell;
+    height: 104px;
+    vertical-align: bottom;
+    min-width: 360px;
+  }
+  /* line 155, ../../scss/bootstrapUI/components/_pages.scss */
+  .family-values .bg h2 {
+    font-size: 28px;
+  }
+  /* line 159, ../../scss/bootstrapUI/components/_pages.scss */
+  .family-values .big-heading {
+    margin-bottom: 48px;
+  }
+  /* line 162, ../../scss/bootstrapUI/components/_pages.scss */
+  .family-values article {
+    min-height: 96px;
+  }
+}
+
+/* line 170, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps {
+  background-color: #5b5a5b;
+}
+/* line 173, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .big-heading {
+  font-family: "LatoWeb";
+}
+/* line 176, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .heading, .next-steps .subheading {
+  color: #e5e5e5;
+  margin-bottom: 12px;
+}
+/* line 179, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .heading a, .next-steps .subheading a {
+  color: inherit;
+  padding-bottom: 2px;
+  border-bottom: solid 1px transparent;
+}
+/* line 183, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .heading a:active, .next-steps .heading a:focus, .next-steps .heading a:hover, .next-steps .subheading a:active, .next-steps .subheading a:focus, .next-steps .subheading a:hover {
+  border-bottom-color: inherit;
+  color: #f1f1f1;
+}
+/* line 189, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .heading {
+  letter-spacing: .03em;
+}
+/* line 192, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps a.btn {
+  margin-top: 24px;
+}
+/* line 195, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .contact-step {
+  position: relative;
+  margin-top: 24px;
+}
+/* line 198, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .contact-step:before {
+  position: absolute;
+  top: 32px;
+  width: calc(100% - 40px);
+  border-top: solid 1px #fd5c22;
+}
+/* line 204, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .contact-step .row > div {
+  margin-bottom: 16px;
+}
+/* line 207, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .contact-step .title {
+  color: #999999;
+  font-size: 24px;
+}
+/* line 210, ../../scss/bootstrapUI/components/_pages.scss */
+.next-steps .contact-step .title > p {
+  font-size: 16px;
+  color: #f1f1f1;
+}
+@media (min-width: 768px) {
+  /* line 170, ../../scss/bootstrapUI/components/_pages.scss */
+  .next-steps {
+    background: url(../img//footer/next-steps-min.png) no-repeat right bottom #5b5a5b;
+    background-size: contain;
+  }
+  /* line 220, ../../scss/bootstrapUI/components/_pages.scss */
+  .next-steps .contact-step:before {
+    content: '';
+  }
+}
+
+/* line 230, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .heading {
+  margin-bottom: 0;
+}
+/* line 234, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .gallery .row {
+  margin-bottom: 8px;
+}
+/* line 237, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .gallery .news-link {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+/* line 240, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .gallery .news-link img {
+  width: auto;
+  max-height: 120px;
+  min-width: auto;
+}
+/* line 246, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .gallery .news-link header .title {
+  background-color: transparent;
+  padding: 16px 0;
+}
+/* line 252, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .gallery .news-link .content p {
+  margin-bottom: 24px;
+}
+/* line 258, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .gallery.border .news-link {
+  border: solid 1px #f1f1f1;
+}
+/* line 265, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-list .content .pull-right {
+  float: inherit !important;
+}
+/* line 270, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-list .subheading + ul li {
+  text-align: left;
+}
+/* line 274, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-list .img {
+  margin: 0 auto;
+  max-width: 320px;
+}
+/* line 277, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-list .img.img-small {
+  max-width: 240px;
+}
+/* line 284, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-block article.design-idea {
+  background: url(../img//services/design-idea.jpg) no-repeat center top;
+  background-size: cover;
+}
+/* line 289, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-block article.proto-idea.mobile {
+  background: url(../img//services/proto-idea-min.jpg) no-repeat 0 center #F8F7FD;
+  background-size: cover;
+  height: 100%;
+}
+/* line 295, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-block article .quote {
+  display: table;
+  width: 100%;
+}
+/* line 298, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-block article .quote header {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 301, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-block article .quote header .title {
+  font-family: "LatoWebLight";
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+/* line 310, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .stack-block article .info .content {
+  max-width: 560px;
+}
+/* line 316, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .list {
+  padding: 12px 24px 24px 0;
+  z-index: 10;
+  position: relative;
+}
+/* line 320, ../../scss/bootstrapUI/components/_pages.scss */
+.services-page .list .img {
+  max-width: 320px;
+  margin: 0 auto 10px;
+}
+@media (min-width: 768px) {
+  /* line 328, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .gallery .news-link .content p {
+    min-height: 52px;
+    font-size: 16px;
+  }
+  /* line 335, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .content {
+    margin-bottom: 20px;
+  }
+  /* line 337, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .content .pull-right {
+    float: right !important;
+    padding: 0;
+  }
+  /* line 342, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .img {
+    margin-top: 56px;
+  }
+  /* line 344, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .img.img-small {
+    margin-top: 0;
+  }
+  /* line 349, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .subheading + p {
+    text-align: left;
+  }
+  /* line 352, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .subheading + p span:before {
+    content: "\A";
+    white-space: pre;
+  }
+  /* line 361, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article {
+    height: 320px;
+  }
+  /* line 363, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article.proto-idea {
+    background: url(../img//services/proto-idea-min.jpg) no-repeat right top #F8F7FD;
+    background-size: cover;
+    background-color: #F8F7FD;
+    min-height: 560px;
+  }
+  /* line 368, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article.proto-idea.mobile {
+    display: none;
+  }
+  /* line 373, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article .quote header {
+    height: 280px;
+  }
+  /* line 375, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article .quote header .title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  /* line 382, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article .info header {
+    margin: 36px 0;
+  }
+  /* line 384, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-block article .info header .title {
+    font-size: 40px;
+  }
+  /* line 392, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .csstable-container .csstable-col {
+    width: 33%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 401, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .content.flip-align .pull-left {
+    float: right !important;
+  }
+  /* line 404, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .stack-list .content.flip-align .pull-right {
+    float: left !important;
+  }
+  /* line 410, ../../scss/bootstrapUI/components/_pages.scss */
+  .services-page .csstable-container {
+    padding: 0 80px;
+  }
+}
+
+/* line 418, ../../scss/bootstrapUI/components/_pages.scss */
+.customers-page .subheading {
+  line-height: 32px;
+}
+/* line 421, ../../scss/bootstrapUI/components/_pages.scss */
+.customers-page .gallery {
+  padding: 8px 0;
+}
+/* line 423, ../../scss/bootstrapUI/components/_pages.scss */
+.customers-page .gallery .row {
+  margin-bottom: 20px;
+}
+/* line 425, ../../scss/bootstrapUI/components/_pages.scss */
+.customers-page .gallery .row > div {
+  margin-bottom: 12px;
+}
+/* line 428, ../../scss/bootstrapUI/components/_pages.scss */
+.customers-page .gallery .row img {
+  margin: 0 auto;
+}
+/* line 432, ../../scss/bootstrapUI/components/_pages.scss */
+.customers-page .gallery + div {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  /* line 437, ../../scss/bootstrapUI/components/_pages.scss */
+  .customers-page .gallery {
+    padding: 16px 64px;
+  }
+  /* line 440, ../../scss/bootstrapUI/components/_pages.scss */
+  .customers-page .gallery .row > div {
+    margin-bottom: 24px;
+  }
+  /* line 443, ../../scss/bootstrapUI/components/_pages.scss */
+  .customers-page .gallery .row img {
+    min-width: 180px;
+  }
+}
+
+/* line 453, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .process {
+  margin: 40px 0;
+}
+/* line 455, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .process h3 {
+  margin: 20px 0;
+}
+/* line 458, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .process img {
+  max-height: 32px;
+}
+/* line 462, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .timeline {
+  display: table;
+}
+/* line 466, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .timeline .timeline-panel .content figure {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 8px;
+}
+/* line 473, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .timeline:after {
+  content: '';
+  display: block;
+  background: #fd5c22;
+  position: absolute;
+}
+/* line 481, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel {
+  margin-bottom: 12px;
+  border-color: #e5e5e5;
+}
+/* line 485, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading {
+  background-color: #f9f9f9;
+  padding: 0;
+}
+/* line 488, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a {
+  display: block;
+  font-family: "LatoWeb";
+  padding: 10px 16px;
+  border-bottom: solid 3px transparent;
+}
+/* line 493, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a i {
+  margin: 2px 16px 0 0;
+  float: left;
+}
+/* line 496, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a i:before {
+  content: '\e009';
+}
+/* line 500, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a:active, .about-page .panel-group .panel-heading a:focus, .about-page .panel-group .panel-heading a:hover {
+  color: #fd5c22;
+  background-color: #f1f1f1;
+  text-decoration: none;
+}
+/* line 505, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a[aria-expanded='true'] {
+  color: #fd5c22;
+  border-color: #fd5c22;
+  background-color: #ffffff;
+}
+/* line 509, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a[aria-expanded='true'] i:before {
+  content: '\e008';
+}
+/* line 512, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .panel-group .panel-heading a[aria-expanded='true']:active, .about-page .panel-group .panel-heading a[aria-expanded='true']:focus, .about-page .panel-group .panel-heading a[aria-expanded='true']:hover {
+  background-color: #ffffff;
+}
+/* line 520, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper br {
+  line-height: 24px;
+}
+/* line 523, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper ul {
+  list-style: none;
+  padding: 8px 0 4px 0;
+}
+/* line 526, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper ul li {
+  padding-left: 18px;
+  text-indent: -18px;
+  margin-bottom: 8px;
+}
+/* line 530, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper ul li:before {
+  content: "• ";
+  color: #fd5c22;
+  margin-right: 6px;
+}
+/* line 535, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper ul li ul {
+  list-style: inside circle;
+}
+/* line 537, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper ul li ul li {
+  padding-left: 28px;
+  text-indent: -28px;
+}
+/* line 540, ../../scss/bootstrapUI/components/_pages.scss */
+.about-page .wpb_wrapper ul li ul li:before {
+  content: "";
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  /* line 551, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .process img {
+    margin-top: 16px;
+  }
+  /* line 556, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel {
+    margin-top: 24px;
+  }
+  /* line 559, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .content figure {
+    float: left;
+  }
+  /* line 562, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .content p {
+    float: right;
+    width: calc(100% - 104px);
+  }
+}
+@media (min-width: 992px) {
+  /* line 572, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel {
+    text-align: right;
+    padding-left: 20px;
+  }
+  /* line 575, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .title {
+    padding: 6px 36px 6px 12px;
+    margin-right: -16px;
+    border-radius: 4px 16px 16px 4px;
+    background-color: #f1f1f1;
+  }
+  /* line 580, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .title:before {
+    content: '';
+    display: block;
+    background: #fd5c22;
+    border: solid 6px #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    top: 6px;
+    right: 4px;
+    position: absolute;
+    box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  /* line 594, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .content {
+    margin-top: 16px;
+    margin-right: 24px;
+  }
+  /* line 597, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .content figure {
+    float: right;
+  }
+  /* line 600, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel .content p {
+    float: left;
+    width: calc(100% - 104px);
+  }
+  /* line 605, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel.timeline-inverted {
+    padding-left: inherit;
+    padding-right: 20px;
+    margin-top: 144px;
+    text-align: left;
+  }
+  /* line 610, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel.timeline-inverted .title {
+    margin-right: inherit;
+    margin-left: -16px;
+    padding: 6px 12px 6px 36px;
+    border-radius: 16px 4px 4px 16px;
+  }
+  /* line 615, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel.timeline-inverted .title:before {
+    right: inherit;
+    left: 4px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  /* line 621, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel.timeline-inverted .content {
+    margin-left: 24px;
+    margin-right: initial;
+  }
+  /* line 624, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel.timeline-inverted .content figure {
+    float: left;
+  }
+  /* line 627, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline .timeline-panel.timeline-inverted .content p {
+    float: right;
+  }
+  /* line 633, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline:after {
+    content: '';
+    width: 4px;
+    left: calc(50% - 2px);
+    top: 0;
+    bottom: 220px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 644, ../../scss/bootstrapUI/components/_pages.scss */
+  .about-page .timeline:after {
+    bottom: 200px;
+  }
+}
+
+/* line 655, ../../scss/bootstrapUI/components/_pages.scss */
+.contact-page .gallery .row {
+  margin-bottom: 40px;
+}
+/* line 657, ../../scss/bootstrapUI/components/_pages.scss */
+.contact-page .gallery .row .heading {
+  margin-bottom: 8px;
+}
+
+/* line 668, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .gallery .row [class*="col-"] {
+  margin-bottom: 8px;
+}
+/* line 672, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .gallery .news-link header {
+  position: absolute;
+}
+/* line 674, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .gallery .news-link header .title {
+  padding-left: 8px;
+  color: #f1f1f1;
+}
+/* line 678, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .gallery .news-link header p {
+  display: none;
+  color: #e5e5e5;
+  padding: 0 8px;
+}
+/* line 686, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .list ul li {
+  margin-left: 12px;
+  display: inline-block;
+}
+/* line 693, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .services-overview .services-icon i.circle {
+  background-color: #fd5c22;
+  height: 80px;
+  width: 80px;
+}
+/* line 698, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .services-overview .services-icon span {
+  display: block;
+  top: 25%;
+  position: absolute;
+  left: calc(50% - 20px);
+  font-size: 32px;
+  color: white;
+  width: 40px;
+}
+/* line 710, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .stack-list h3 {
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+/* line 714, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .stack-list > .row {
+  margin-top: 24px;
+}
+/* line 717, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .stack-list .img.mobile {
+  display: none;
+}
+/* line 720, ../../scss/bootstrapUI/components/_pages.scss */
+.resources-page .stack-list .key {
+  padding: 10px 20px;
+  background-color: #f6f6f6;
+}
+@media (min-width: 768px) {
+  /* line 729, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row [class*="col-"] {
+    margin: 0;
+  }
+  /* line 734, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row-no-bounding > [class*="col-"]:first-child {
+    padding-left: 3px;
+  }
+  /* line 737, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row-no-bounding > [class*="col-"]:last-child {
+    padding-left: 6px;
+  }
+  /* line 739, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row-no-bounding > [class*="col-"]:last-child .row:first-child [class*="col-"] {
+    padding-bottom: 3px;
+  }
+  /* line 742, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row-no-bounding > [class*="col-"]:last-child .row:last-child [class*="col-"] {
+    padding-top: 6px;
+  }
+  /* line 746, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row-no-bounding > [class*="col-"]:last-child .row [class*="col-"]:first-child {
+    padding-right: 3px;
+  }
+  /* line 749, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .row-no-bounding > [class*="col-"]:last-child .row [class*="col-"]:last-child {
+    padding-left: 3px;
+  }
+  /* line 756, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .news-link header {
+    background: rgba(25, 25, 25, 0.66);
+  }
+  /* line 759, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .news-link:hover {
+    background: rgba(109, 109, 109, 0.5);
+  }
+  /* line 761, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .news-link:hover header {
+    background: rgba(25, 25, 25, 0.75);
+    top: 0;
+  }
+  /* line 764, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .news-link:hover header p {
+    display: block;
+  }
+  /* line 768, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .gallery .news-link:hover img {
+    opacity: .8;
+  }
+  /* line 775, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .stack-list .img.mobile {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 480px;
+  }
+  /* line 780, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .stack-list .business {
+    text-align: right;
+  }
+  /* line 782, ../../scss/bootstrapUI/components/_pages.scss */
+  .resources-page .stack-list .business h3 {
+    margin-top: 10px;
+  }
+}
+
+/* line 793, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .blog-page {
+  padding: 16px 8px;
+}
+/* line 796, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery {
+  padding: 0 15px;
+}
+/* line 798, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .column-row {
+  column-width: 280px;
+  column-gap: 20px;
+}
+/* line 805, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .column-item {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 20px;
+}
+/* line 811, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .news-link .title {
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 4px;
+  background-color: transparent;
+}
+/* line 817, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .news-link .figure-img {
+  overflow: hidden;
+  max-height: 200px;
+}
+/* line 822, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .aside {
+  color: #999999;
+  font-size: 12px;
+  margin: 12px 0;
+}
+/* line 827, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .content p {
+  word-spacing: .1em;
+  display: block;
+  display: -webkit-box;
+  height: 67.2px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 8px 0;
+}
+/* line 841, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .gallery .btn {
+  display: inline-block;
+  color: #fb4402;
+  margin: 0;
+  border-bottom: solid 1px #fb4402;
+}
+/* line 850, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content {
+  font-size: 18px;
+  line-height: 1.8;
+}
+/* line 853, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content p {
+  word-spacing: .1em;
+  display: block;
+  word-wrap: break-word;
+  margin-bottom: 2em;
+}
+/* line 859, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content p b, .blog .one-column-row .content p strong {
+  text-transform: uppercase;
+}
+/* line 863, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content a {
+  color: #fd5c22;
+  border-bottom: solid 1px #fd5c22;
+  padding-bottom: 2px;
+}
+/* line 868, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content ul {
+  list-style: none;
+}
+/* line 870, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content ul li {
+  padding-left: 1em;
+  position: relative;
+}
+/* line 873, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content ul li:before {
+  border-bottom: 5px solid transparent;
+  border-left: 9px solid #fd5c22;
+  border-top: 5px solid transparent;
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 0;
+}
+/* line 884, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content ul li b, .blog .one-column-row .content ul li strong {
+  font-weight: bold;
+}
+/* line 889, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content blockquote {
+  font-size: 28px;
+  line-height: 40px;
+  margin: .25em 10px 1.5em 10px;
+  padding: 0.5em 10px;
+  color: #000000;
+  background: #f9f9f9;
+  text-align: right;
+  float: right;
+  quotes: "“" "”" "‘" "’";
+}
+/* line 899, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content blockquote:before {
+  color: #000000;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.2em;
+  vertical-align: -0.4em;
+}
+/* line 909, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .one-column-row .content .final:before {
+  border-top: 5px solid #fb4402;
+  content: '';
+  display: block;
+  padding-top: 20px;
+}
+/* line 919, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .sidebar {
+  list-style: none;
+}
+/* line 921, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .sidebar .column-item {
+  margin-bottom: 20px;
+  padding: 16px 8px;
+  border-bottom: solid 1px #fd5c22;
+}
+/* line 925, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .sidebar .column-item .news-link {
+  color: inherit;
+}
+/* line 927, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .sidebar .column-item .news-link .title {
+  font-size: 120%;
+  line-height: 140%;
+}
+/* line 931, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .sidebar .column-item .news-link .figure-img {
+  display: none;
+}
+/* line 935, ../../scss/bootstrapUI/components/_pages.scss */
+.blog .sidebar .column-item p {
+  margin: 0;
+}
+@media (min-width: 992px) {
+  /* line 942, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .gallery {
+    padding: 0;
+  }
+  /* line 945, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog aside {
+    padding: 16px 8px;
+  }
+  /* line 948, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar {
+    margin-top: 20px;
+  }
+  /* line 950, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar .column-item {
+    padding: 8px 0;
+  }
+  /* line 953, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar p {
+    margin: 0;
+    display: inline-block;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 961, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar .column-item {
+    border-bottom-color: transparent;
+  }
+  /* line 964, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar .column-item .news-link header {
+    float: right;
+    width: calc(100% - 130px);
+  }
+  /* line 968, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar .column-item .news-link .figure-img {
+    display: block;
+    float: left;
+    max-width: 120px;
+  }
+  /* line 974, ../../scss/bootstrapUI/components/_pages.scss */
+  .blog .sidebar .column-item p {
+    margin: 8px 0 0 8px;
+  }
+}
+
+/*# sourceMappingURL=bootstrapUI.css.map */
