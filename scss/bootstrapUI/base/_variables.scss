@@ -1,0 +1,115 @@
+/* Variables
+================================================== */
+
+  // Column Variables
+  $column:                60px;
+  $gutter:                20px;
+
+
+  // Static Grid Breakpoint Variables (Media Queries)
+  $ext-desktop:           1200px;
+  $desktop:               992px;
+  $tablet:                768px;
+  $mobile:                320px;
+
+  $desktop-l:             1400px;
+  $tablet-p:              640px (orientation portrait);
+  $tablet-l:              800px (orientation landscape);
+
+
+  //Assets location
+  $fonts-path:            "../fonts" !default;
+  $images-path:           "../img/";
+
+
+  // Font Variables
+  $latoRegular:           'LatoWeb';
+  $latoitalic:            'LatoWebItalic';
+  $latoLight:             'LatoWebLight';
+  $latoSemibold:          'LatoWebSemibold';
+  $latoBold:              'LatoWebBold';
+  $arial:                 'Arial', 'Helvetica', sans-serif;
+  $sif-prefix:            'cvif-';
+
+
+  // Color Variables
+  // Clairvoyant $orange
+  //$tangy-orange:          #f7703d;
+  $main-orange:           #fd5c22;
+  //$seduzione-orange:      #f8621f;
+  $vivid-orange:          #fb4402;
+  //$audacia:               #e1452f;
+  $deep-orange:           #a42918;
+
+
+
+  $main-red:              #EC0000;
+  $vivid-red:             #E66000;
+  $scarlet-red:           #CC0000;
+  $carmine-red:           #B30000;
+  $deep-red:              #990000;
+  $dark-red:              #800000;
+
+
+  // Greyscale
+  $black:                 #000000;
+
+  $rich-black:            #191919;    //  Hero, H1
+  $dark-grey:             #333333;    //  Heading, H2, H3, H4, Label
+  $deep-grey:             #444444;
+  $charcoal-grey:         #5b5a5b;    //  General Text Color
+
+  $dim-grey:              #6d6d6d;    //  Subheading, H5, H6
+
+  $grey:                  #999999;    //  Input Border
+  $soft-grey:             #c6c6c6;    //  Legends, Blockquote
+  $light-grey:            #e5e5e5;
+  $off-white:             #f1f1f1;    //  Background
+
+  $white:                 #ffffff;
+
+
+  // Secondary Palette
+  $green:                 #abc111;
+  $pastel-green:          #c4d358;
+  $soft-green:            #dde6A0;
+  $light-green:           #f2f6dc;
+
+  $orange:                #e59d27;
+  $pastel-orange:         #edba67;
+  $soft-orange:           #f5d8a9;
+  $light-orange:          #fbf0df;
+
+  $violet:                #9e3667;
+  $pastel-violet:         #bb7294;
+  $soft-violet:           #d8afc2;
+  $light-violet:          #f1e1e8;
+
+  $blue:                  #1bb3bc;
+  $pastel-blue:           #5fcad0;
+  $soft-blue:             #a4e1e4;
+  $light-blue:            #ddf4f5;
+
+
+  // Alerts & Error
+  $info-green:            #62a642;
+  $info-blue:             #0080ff;
+  $info-red:              #ff0000;
+  $info-orange:           #fff2de;
+  $info-tangerine:        #F7931E;
+  $info-brown:            #A67C52;
+  $input-focus:           #23AFDE;
+  $input-bg:              #FDF9C9;
+
+
+  // Social
+  $twitter-blue:          #4099ff;
+  $facebook-blue:         #3b5998;
+  $instagram-red:         #663300;
+
+
+  // Shadows
+  $text-shadow:           2px 2px 4px rgba($black, .8);
+  $box-shadow:            0px 2px 2px rgba($black, .1);
+  $box-shadow-error:      inset -0px 2px 4px rgba($soft-grey, 1);
+  $box-shadow-focus:      0 0 5px rgba($input-focus, 1);

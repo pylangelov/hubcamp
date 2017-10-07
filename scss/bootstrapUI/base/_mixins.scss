@@ -1,0 +1,24 @@
+/* Mixins
+================================================== */
+  // Gradients
+    @mixin linearGradient($top, $bottom){
+      background: $top;
+      background: -webkit-linear-gradient(top, $top 15%, $bottom 85%);
+      background: -ms-linear-gradient(top, $top 15%, $bottom 85%);
+      background: linear-gradient(to bottom, $top 15%, $bottom 85%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 );
+    }
+
+
+  // Transitions
+  $transition-property: all;
+  $transition-time: .3s;
+  $method: ease-in-out;
+  @mixin transitionButton() {
+    //-ms-transition: $transition-property $transition-time $method;
+    //transition: $transition-property $transition-time $method;
+    transition: color .25s linear, background-color .5s ease-in-out, border-color .25s ease-in;
+  }
+  @mixin transitionHeader() {
+    transition: position .85s ease-in, background .75s ease-in-out, padding 1.15s linear;
+  }

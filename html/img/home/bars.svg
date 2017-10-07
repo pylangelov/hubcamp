@@ -1,0 +1,43 @@
+<svg width="1454px" height="229px" viewBox="0 207 1454 229" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="-36.140839%" y1="155.507812%" x2="103.797446%" y2="-69.8958333%" id="linearGradient-orange">
+      <stop stop-color="#FFB600" offset="0%"></stop>
+      <stop stop-color="#FF6D1D" offset="100%"></stop>
+    </linearGradient>
+
+    <linearGradient x1="-32.3506579%" y1="149.402831%" x2="102.104554%" y2="-67.1690314%" id="linearGradient-red">
+      <stop stop-color="#EF0B70" offset="0%"></stop>
+      <stop stop-color="#FF6802" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+
+  <g id="Bars" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, 207.000000)">
+    <!-- Greyscale Right -->
+    <g id="rightGreyBars" class="rightGreyBars" transform="translate(757.000000, 28.000000)">
+        <rect id="Rectangle-24" fill="#D5D5D5" x="0.0340218712" y="156.791506" width="39.7509113" height="28.7355212" rx="14.3677606"></rect>
+        <rect id="Rectangle-24" fill="#D8D8D8" x="380.759417" y="134.687259" width="316.240583" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="#D8D8D8" style="mix-blend-mode: multiply;" x="246.489672" y="38.3127413" width="386.90887" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="#D5D5D5" opacity="0.616621377" x="405.434427" y="0.882882883" width="42.4598623" height="30.3564994" rx="15.1782497"></rect>
+    </g>
+    <!-- Greyscale Left -->
+    <g id="leftGreyBars" class="leftGreyBars" transform="translate(95.000000, 44.000000)">
+        <rect id="Rectangle-24" fill="#D9D9D9" x="147.922236" y="118.687259" width="386.90887" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="#D9D9D9" opacity="0.818161232" x="0.40218712" y="0.208494208" width="334.791009" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="#D8D8D8" style="mix-blend-mode: multiply;" x="64.8869988" y="24.965251" width="60.9513973" height="44.2084942" rx="22.1042471"></rect>
+    </g>
+    <!-- Color Right -->
+    <g id="rightColorBars" transform="translate(688.000000, 0.000000)">
+        <rect id="Rectangle-24" fill="url(#linearGradient-orange)" style="mix-blend-mode: multiply;" x="89.3511543" y="157.382239" width="60.9513973" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="url(#linearGradient-red2)" style="mix-blend-mode: multiply;" opacity="0.889039855" x="413.54192" y="140.877735" width="98.9356015" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="url(#linearGradient-orange)" opacity="0.797780797" x="61.0838396" y="88.4169884" width="386.90887" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="#FD5C22" x="0.132442284" y="0" width="386.90887" height="44.2084942" rx="22.1042471"></rect>
+    </g>
+    <!-- Color  Left -->
+    <g id="leftColorBars" transform="translate(0.000000, 15.000000)">
+        <rect id="Rectangle-24" fill="url(#linearGradient-red)" style="mix-blend-mode: multiply;" x="546.795869" y="169.791506" width="141.762153" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="url(#linearGradient-red)" opacity="0.818161232" x="0" y="120.277992" width="334.791009" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="url(#linearGradient-red)" style="mix-blend-mode: multiply;" x="266.772783" y="51.3127413" width="386.90887" height="44.2084942" rx="22.1042471"></rect>
+        <rect id="Rectangle-24" fill="url(#linearGradient-orange)" x="537.078979" y="0.0308880309" width="60.9513973" height="44.2084942" rx="22.1042471"></rect>
+    </g>
+  </g>
+</svg>

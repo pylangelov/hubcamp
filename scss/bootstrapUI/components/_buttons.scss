@@ -1,0 +1,86 @@
+/* Button
+================================================== */
+
+  // Core
+    @mixin btn-disabled {
+      border: none;
+      cursor: default;
+      box-shadow: none;
+      text-shadow: none;
+      opacity: 0.33;
+    }
+    @mixin btn-core {
+      font-family: $latoBold;
+      outline: 0;
+      word-spacing: .06em;
+    }
+    @mixin btn-style ($bgcolor, $bdrcolor, $txtcolor) {
+      background-color: $bgcolor;
+      border: solid 1px $bdrcolor;
+      color: $txtcolor;
+    }
+
+
+  // Styles
+    @mixin btn {
+      @include btn-core;
+      @include transitionButton();
+    }
+    @mixin btn-primary {
+      @include btn-core;
+      @include btn-style($main-orange, $vivid-orange, $white);
+      padding-left: 48px;
+      padding-right: 48px;
+      &:active, &:focus, &:hover {
+        background-color: lighten($main-orange, 12);
+        border-color: $vivid-orange;
+        color: $white;
+      }
+      &:active {
+        &:hover {
+          background-color: darken($main-orange, 12);
+          border-color: lighten($vivid-orange, 24);
+        }
+      }
+    }
+    @mixin btn-default {
+      @include btn-core;
+      @include btn-style($white, $main-orange, $main-orange);
+      padding-left: 48px;
+      padding-right: 48px;
+      border-width: 2px;
+      &:active, &:focus, &:hover {
+        background-color: $white;
+        border-color: $vivid-orange;
+        color: $rich-black;
+      }
+      &:active {
+        &:hover {
+          background-color: $off-white;
+          border-color: lighten($vivid-orange, 24);
+        }
+      }
+    }
+
+    input[type="submit"] { @include btn-primary; }
+    .btn, button, input[type="button"], input[type="reset"] {
+      @include btn;
+    }
+
+    .btn-default {
+      @include btn-default;
+      &.disabled,
+      &[disabled] {
+        @include btn-disabled;
+      }
+    }
+    .btn-primary {
+      @include btn-primary;
+      &.disabled,
+      &[disabled] {
+        @include btn-disabled;
+      }
+    }
+    .btn-rounded {
+      border-radius: 24px;
+    }

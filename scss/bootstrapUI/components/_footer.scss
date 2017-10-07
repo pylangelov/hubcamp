@@ -1,0 +1,67 @@
+/* Footer
+================================================== */
+  .footer {
+    padding: 32px 0 16px;
+    background-color: $white;
+    div {
+      a {
+        display: block;
+        color: inherit
+      }
+      &.social {
+        border-bottom: solid 1px $grey;
+        padding-bottom: 20px;
+        margin-bottom: 48px;
+        a {
+          height: 24px;
+          color: $soft-grey;
+          text-align: center;
+          background-color: $white;
+          &:active, &:focus, &:hover {
+            text-decoration: none;
+            color: $dim-grey;
+          }
+          i:before {
+            font-size: 24px;
+          }
+        }
+      }
+      &.logo {
+        max-width: 200px;
+        margin-bottom: 40px;
+        p {
+          font-family: $latoLight;
+          font-size: 20px;
+          letter-spacing: 0.08px;
+          margin-top: 20px;
+        }
+      }
+      ul {
+        list-style: none;
+        margin-bottom: 32px;
+        li {
+          margin-bottom: 16px;
+          font-size: 16px;
+          a {
+            color: $dark-grey;
+            font-family: $latoLight;
+          }
+        }
+      }
+    }
+    h3 {
+      font-family: $latoBold;
+      color: $rich-black;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.015em;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+    .copyright {
+      font-size: 12px;
+    }
+    @include breakpoint($tablet) {
+      padding: 48px 0 24px;
+    }
+  }

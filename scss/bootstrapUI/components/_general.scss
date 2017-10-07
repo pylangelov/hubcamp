@@ -1,0 +1,417 @@
+/* Base
+================================================== */
+  // Atoms
+  a {
+    color: inherit;
+    &:active, &:focus, &:hover {
+      color: $main-orange;
+    }
+  }
+  .no-padding {
+    padding: 0;
+  }
+  .minimal-padding {
+    padding: 0 8px;
+  }
+  .row-no-bounding {
+    margin: 0;
+    padding: 0;
+    [class*="col-"], .row {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .img-fit {
+    width: auto !important;
+    max-width: initial !important;
+  }
+  .white-color {
+    color: $white;
+  }
+  .white-bg {
+    background-color: $white;
+  }
+  .off-white-bg {
+    background-color: $off-white;
+  }
+  .light-grey-bg {
+    background-color: $light-grey;
+  }
+  .charcoal-grey-bg {
+    background-color: $charcoal-grey;
+  }
+  .container {
+    border: dotted 1px red;
+  }
+  .container-fluid {
+    border: dotted 1px green;
+  }
+  .col-sm-12 {
+    //border: solid 1px aqua;
+  }
+
+// Molecles
+  .services-icon {
+    display: inline-block;
+    margin: 24px auto;
+    text-align: center;
+    position: relative;
+    i {
+      &[class^="cvif-"]:before {
+        font-size: 24px;
+        color: $main-orange;
+      }
+      &.square,
+      &.circle {
+        display: block;
+        border: solid 1px $main-orange;
+        height: 112px;
+        width: 112px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 0 auto ;
+        background-color: $white;
+        + i,
+        + img {
+          height: 88px;
+          width: 88px;
+          position: absolute;
+          left: 12px;
+          top: 12px;
+          &:before {
+            font-size: 64px;
+            line-height: 1.4;
+          }
+        }
+      }
+      &.circle {
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .services-overview {
+    a.btn {
+      margin-top: 20px
+    }
+    @include breakpoint($tablet) {
+      a.btn {
+        margin-top: 40px
+      }
+    }
+  }
+
+  .list {
+    .title {
+      font-family: $latoSemibold;
+      font-size: 20px;
+      color: $dark-grey;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        margin-bottom: 24px;
+        color: $dim-grey;
+        padding-left: 18px;
+        text-indent: -18px;
+        &:before {
+          content: "• ";
+          color: $main-orange;
+          margin-right: 6px;
+        }
+      }
+    }
+    @include breakpoint($tablet) {
+      .list {
+        .title {
+          font-size: 24px;
+        }
+        ul {
+          padding: 1em;
+          li {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .stack-list {
+    .subheading {
+      color: $dark-grey;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
+      color: $dim-grey;
+      letter-spacing: -0.04px;
+      line-height: 25px;
+    }
+  }
+
+  .stack-block {
+    article {
+      padding: 24px;
+      min-height: 90px;
+    }
+    .info {
+      header {
+        .title {
+          font-size: 28px;
+        }
+      }
+      .content {
+        line-height: 140%;
+        font-size: 14px;
+      }
+    }
+    @include breakpoint($tablet) {
+      .info .content {
+        line-height: 180%;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .csstable-container {
+    .csstable-col {
+      &:before {
+        content: '';
+        display: block;
+        background: $white;
+        border: solid 1px $light-grey;
+        height: 100%;
+        z-index: 1;
+        width: calc(100% - 16px);
+        position: absolute;
+      }
+    }
+
+    @include breakpoint($tablet) {
+      margin: 20px 0 40px;
+      display: table;
+      .csstable-col {
+        display: table-cell;
+        float: none;
+      }
+    }
+  }
+
+// Components
+  .header {
+    .intro-text {
+      padding: 40px 8px 0 8px;
+      h1, h2 {
+        letter-spacing: -0.03em;
+      }
+      .lead-in {
+        font-family: $latoSemibold;
+        color: $rich-black;
+      }
+      .heading {
+        font-family: $latoLight;
+        color: $dark-grey;
+        line-height: 140%;
+      }
+    }
+    .box-container {
+      svg.article {
+        display: block;
+        height: 300px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+    @include breakpoint($tablet) {
+      .intro-text {
+        padding-top: 80px;
+        //padding-bottom: 36px;
+        .lead-in {
+          font-size: 36px;
+        }
+        span {
+          &:before {
+            content: "\A";
+            white-space: pre;
+          }
+        }
+        .heading {
+          font-size: 20px;
+        }
+      }
+    }
+    @include breakpoint($desktop) {
+      .intro-text {
+        padding-top: 120px;
+        .lead-in {
+          font-size: 40px;
+        }
+        .heading {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  section {
+    padding: 16px 0 48px;
+    //border-top: solid 1px red;
+    .heading {
+      color: $dark-grey;
+      margin: 10px 0 20px;
+      letter-spacing: 0.08em;
+    }
+    .subheading {
+      margin: 12px 0 24px;
+      color: $dim-grey;
+      letter-spacing: -0.03em;
+      line-height: 150%;
+      strong {
+        font-weight: 400;
+        color: $main-orange;
+      }
+    }
+    .service-heading {
+      font-size: 14px;
+      line-height: 20px;
+      color: $dark-grey;
+      font-family: $latoSemibold;
+    }
+    .big-heading {
+      font-family: $latoLight;
+      font-size: 28px;
+      color: $main-orange;
+      margin-bottom: 24px;
+    }
+    .small-heading {
+      border-left: solid 1px $grey;
+      padding: 8px 0 8px 24px;
+    }
+    .subheading-light {
+      color: $grey;
+    }
+
+    @include breakpoint($tablet) {
+      padding: 64px 0;
+      .heading {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 32px;
+      }
+      .subheading {
+        font-size: 18px;
+        line-height: 30px;
+      }
+      .service-heading {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .big-heading {
+        font-size: 40px;
+      }
+      .small-heading {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    @include breakpoint($desktop) {
+      padding: 80px 0;
+      .service-heading {
+        span {
+          &:before {
+            content: "\A";
+            white-space: pre;
+          }
+        }
+      }
+    }
+  }
+
+  .gallery {
+    .news-link {
+      position: relative;
+      color: inherit;
+      display: block;
+      margin-bottom: 8px;
+      bottom: 0;
+      header {
+        position: relative;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        z-index: 10;
+        .title {
+          font-family: $latoBold;
+          font-size: 13px;
+          line-height: 18px;
+          color: $dark-grey;
+          margin: 0;
+          padding: 4px;
+          background-color:rgba($rich-black, .9);
+        }
+      }
+    }
+    img {
+      min-width: 100%;
+    }
+
+    @include breakpoint($tablet) {
+      //padding: 0 4px;
+      .news-link {
+        margin-bottom: 0;
+        header .title {
+          font-size: 16px;
+          line-height: 20px;
+          background-color: transparent;
+        }
+      }
+    }
+    @include breakpoint($desktop) {
+      padding: 0 12px;
+    }
+  }
+
+  .timeline {
+    list-style: none;
+    .timeline-panel {
+      width: 100%;
+      position: relative;
+      z-index: 50;
+      .title {
+        display: inline-block;
+        padding: 6px;
+        border-radius: 4px;
+        position: relative;
+        font-family: $latoBold;
+        color: $dark-grey;
+        font-size: 14px;
+        margin: 0;
+      }
+      .content {
+        border: solid 1px $soft-grey;
+        border-radius: 4px;
+        padding: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+        line-height: 140%;
+      }
+    }
+    @include breakpoint($tablet) {
+      .timeline-panel {
+        .title {
+          font-size: 18px;
+        }
+      }
+    }
+    @include breakpoint($desktop) {
+      .timeline-panel {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+
+// Templates

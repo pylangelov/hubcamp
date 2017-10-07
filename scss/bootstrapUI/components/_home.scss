@@ -1,0 +1,284 @@
+/* Header
+================================================== */
+
+  // Hero Image
+    .hero-image {
+      .shapes {
+        display: block;
+        min-height: 400px;
+        background: url(#{$images-path}/hero-image/hero-image-01-min.jpg) no-repeat center top;
+        background-size: cover;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.img/hero-image/hero-image-01-min.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/hero-image/hero-image-01-min.jpg', sizingMethod='scale')";
+      }
+      .box1 {
+        width: 100%;
+        height: 300px;
+        border: solid 1px $grey;
+        background: rgba($white, .3);
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        .wave {
+          opacity: .4;
+          position: absolute;
+          top: 3%;
+          left: 50%;
+          background: linear-gradient(60.81deg, #27D2EA 0%, #0CDAF8 100%);
+          width: 500px;
+          height: 500px;
+          margin-left: -250px;
+          margin-top: -250px;
+          transform-origin: 50% 48%;
+          border-radius: 43%;
+          animation: drift 3000ms infinite linear;
+        }
+      }
+    }
+
+
+
+  // News
+    .news {
+      background-color: $white;
+      //padding-top: 240px;
+      .gallery  {
+        .row.row-no-bounding {
+          margin-bottom: 6px;
+          @include breakpoint($tablet) {
+            &:nth-of-type(odd) {
+              &:first-child {
+                .col-sm-8 {
+                  padding: 3px;
+                }
+                .col-sm-4 {
+                  padding-left: 1px;
+                  [class*="col-"] {
+                    padding: 3px;
+                  }
+                }
+              }
+            }
+            &:nth-of-type(even) {
+              [class*="col-"] {
+                padding: 0 3px;
+              }
+            }
+          }
+        }
+        .news-link header {
+          position: absolute;
+          .title {
+            padding-left: 8px;
+            color: $off-white;
+          }
+        }
+      }
+    }
+    .ie8 .news .gallery {
+      .row-no-bounding {
+        &.first-child {
+          .col-sm-8 {
+            padding: 3px;
+            p {
+              bottom: 36px;
+            }
+          }
+          .col-sm-4 {
+            padding-left: 1px;
+            .col-sm-12 {
+              padding: 3px;
+            }
+          }
+        }
+        &.second-child {
+          .col-sm-4 {
+            padding: 0 3px;
+          }
+        }
+      }
+    }
+
+
+  // Services
+    .services {
+      .bars {
+        display: block;
+        background: url(#{$images-path}/home/services-big-data-min1.jpg) no-repeat center top;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        //padding-bottom: 64px;
+        svg {
+          width: 100%;
+          transform: scale(1.5, 1.5);
+        }
+        .main-orange {
+          fill: $main-orange;
+        }
+        .leftGreyBars{
+          //transform: translate(95px, 44px);
+          position: relative;
+          opacity: 0.1;
+        }
+        .rightGreyBars{
+          //transform: translate(757px, 18px);
+          //transform: translateY(0);
+          opacity: 0.1;
+          position: relative;
+        }
+      }
+      &.parallax .bars {
+        //background-color: white;
+        padding-bottom: 0;
+      }
+      @include breakpoint($tablet) {
+        .bars {
+          margin-top: 40px;
+          //padding-bottom: 80px;
+          svg {
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+
+
+  // Customers
+    .customers {
+      background-color: $white;
+      .subheading {
+        color: $grey;
+      }
+      .gallery {
+        padding: 8px 0;
+        .row {
+          margin-bottom: 20px;
+          > div {
+            margin-bottom: 12px;
+          }
+          img {
+            margin: 0 auto;
+          }
+        }
+        + div {
+          margin-top: 0;
+        }
+      }
+      @include breakpoint($tablet) {
+        .gallery {
+          padding: 16px 64px;
+          .row {
+            > div {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+
+
+  // Articles
+    .articles {
+      padding-bottom: 40px;
+      .gallery {
+        .row {
+          [class*="col-"] {
+            margin-bottom: 8px;
+          }
+        }
+        .news-link header {
+          position: absolute;
+          .title {
+            padding-left: 8px;
+            color: $off-white;
+          }
+        }
+      }
+      @include breakpoint($tablet) {
+        padding-bottom: 80px;
+        .gallery {
+          .row {
+            [class*="col-"] {
+              margin: 0;
+            }
+          }
+          .row-no-bounding > [class*="col-"] {
+            &:first-child {
+              padding-left: 3px;
+            }
+            &:last-child {
+              padding-left: 6px;
+              .row:first-child [class*="col-"] {
+                padding-bottom: 3px;
+              }
+              .row:last-child [class*="col-"] {
+                padding-top: 3px;
+                &:first-child {
+                  padding-right: 3px;
+                }
+                &:last-child {
+                  padding-left: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .ie8 .articles .gallery {
+      .row-no-bounding .second-child {
+        padding-left: 6px;
+        .col-sm-12 {
+          padding-bottom: 3px;
+        }
+        .col-sm-6 {
+          padding-top: 3px;
+          padding-left: 3px;
+          &:first-child {
+            padding-left: 0;
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+
+
+  // Contact
+    .contact {
+      background-color: $white;
+      form {
+        .row {
+          margin-bottom: 20px;
+        }
+        label {
+          font-family: $latoLight;
+        }
+        input.form-control {
+          background-color: $light-grey;
+          margin-bottom: 20px;
+          height: 45px;
+        }
+      }
+      @include breakpoint($desktop) {
+        .subheading {
+          margin-bottom: 48px;
+        }
+        form {
+          padding: 0 36px;
+          .row {
+            &:first-child {
+              margin-bottom: 48px;
+              .col-md-6 {
+                &:first-child {
+                  padding-right: 32px;
+                }
+                &:last-child {
+                  padding-left: 32px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
